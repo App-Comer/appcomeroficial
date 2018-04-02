@@ -8,6 +8,26 @@ class App extends React.Component {
     };
   }
 
+  //Invokes getYouTubeVideos which renders the app component again
+  //with the right state variables
+  componentDidMount(){
+    this.getYouTubeVideos('Engineer memes');
+  }
+
+  getYouTubeVideos(query){
+    var options = {
+      key: this.props.API_KEY,
+      query: query
+    }
+
+    this.props.searchYouTube(options, (videos)=>{
+      this.setState({
+        videos: videos,
+        currentVideo: videos[0] //let's play the first video on the array
+      })
+    })
+  }
+
   handleVideolistEntryTitleClick(video){
     this.setState({currentVideo:video})
   }
