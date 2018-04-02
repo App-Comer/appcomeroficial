@@ -1,7 +1,8 @@
 class App extends React.Component {
-  constructor (props){
+  constructor (props) {
     super(props);
 
+    //adding lifecycle method to the class
     this.state = {
       videos: window.exampleVideoData,
       currentVideo: window.exampleVideoData[0]
@@ -10,46 +11,49 @@ class App extends React.Component {
 
   //Invokes getYouTubeVideos which renders the app component again
   //with the right state variables
-  componentDidMount(){
-    this.getYouTubeVideos('Engineer memes');
+  componentDidMount() {
+    this.getYouTubeVideos('I love you barney');
   }
 
-  getYouTubeVideos(query){
+  //here we are using query from searchYouTube component to get the
+  //properties of the video
+  getYouTubeVideos(query) {
     var options = {
       key: this.props.API_KEY,
       query: query
-    }
+    };
 
+    //getting options from searchYouTube and videos from query
     this.props.searchYouTube(options, (videos)=>{
       this.setState({
         videos: videos,
         currentVideo: videos[0] //let's play the first video on the array
-      })
-    })
+      });
+    });
   }
 
-  handleVideolistEntryTitleClick(video){
-    this.setState({currentVideo:video})
+  handleVideolistEntryTitleClick(video) {
+    this.setState({currentVideo: video});
   }
 
   render() {
-    return(
+    return (
       <div>
-          <nav className="navbar">
-            <div className="col-md-6 offset-md-3">
-              <Search />
-            </div>
-          </nav>
-          <div className="row">
-            <div className="col-md-7">
-              <VideoPlayer video={this.state.currentVideo}/>
-            </div>
-            <div className="col-md-5">
-              <VideoList videos = {this.state.videos} handleVideolistEntryTitleClick={this.handleVideolistEntryTitleClick.bind(this)}/>
-            </div>
+        <nav className="navbar">
+          <div className="col-md-6 offset-md-3">
+            <Search handleSearchInput={this.getYouTubeVideos.bind(this)}/>
+          </div>
+        </nav>
+        <div className="row">
+          <div className="col-md-7">
+            <VideoPlayer video={this.state.currentVideo}/>
+          </div>
+          <div className="col-md-5">
+            <VideoList videos = {this.state.videos} handleVideolistEntryTitleClick={this.handleVideolistEntryTitleClick.bind(this)}/>
           </div>
         </div>
-      )
+      </div>
+    );
   }
 }
 
