@@ -8,5 +8,5 @@ node_modules/
 compiled/
 
 ## API keys ##
-src/config/youtube.js
+src/config
 compiled/config/youtube.js
