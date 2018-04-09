@@ -10,8 +10,7 @@
     "live-server": "^1.2.0",
     "jquery": "^2.2.1",
     "react": "^16.3.1",
-    "react-dom": "^16.3.1",
-
+    "react-dom": "^16.3.1"
   },
   "devDependencies": {
     "babel-core": "^6.23.1",
