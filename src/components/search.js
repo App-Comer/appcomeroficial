@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+/*import React, { Component } from 'react'
 
 class Search extends Component {
  state = {
@@ -24,4 +24,4 @@ class Search extends Component {
  }
 }
 
-export default Search
+export default Search */
