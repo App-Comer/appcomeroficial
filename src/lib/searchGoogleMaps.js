@@ -1,8 +1,8 @@
-'use strict';
+
 
 //setting up var as URL
-var mapsUrl = 'https://maps.googleapis.com/maps/api/';
+// var mapsUrl = 'https://maps.googleapis.com/maps/api/';
 //making a GET request to bring data
-var searchMaps = {};
+// var searchMaps = {};
 
-window.searchGoogleMaps = searchGoogleMaps;
+// window.searchGoogleMaps = searchGoogleMaps;
