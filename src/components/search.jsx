@@ -1,27 +1,24 @@
-import React, { Component } from 'react'
+var Search = ({handleOnSearchChange}) => (
+  <div className="search-bar form-inline">
+    <input className="form-control" type="text" onChange ={(event) =>
+      {handleOnSearchChange(event.target.value)}}/>
+    <button className="btn hidden-sm-down">
+      <span className="glyphicon glyphicon-search"></span>
+    </button>
+  </div>
+);
 
-class Search extends Component {
- state = {
-   query: '',
- }
+getRestaurant(query) {
+  var Options = {
+    key: this.props.API_KEY_YELP,
+    query: query,
+    max: 50
+  }
 
- handleInputChange = () => {
-   this.setState({
-     query: this.search.value
-   })
- }
- render() {
-   return (
-     <form>
-       <input
-         placeholder="Search for..."
-         ref={input => this.search = input}
-         onChange={this.handleInputChange}
-       />
-       <p>{this.state.query}</p>
-     </form>
-   )
- }
+  this.props.searchRestaurant(Options, (googleMapsData) => {
+    this.setState({restaurant : searchRestaurant, googleMapsData : data[50]});
+});
 }
 
-export default Search
+
+window.Search = Search;
