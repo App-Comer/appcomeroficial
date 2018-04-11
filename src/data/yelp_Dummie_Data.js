@@ -1,5 +1,3 @@
-"use strict";
-
 //Example data from Yelp
 
 window.exampleYelpData = {

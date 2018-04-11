@@ -19,12 +19,12 @@ class App extends React.Component {
       quert: query
     };
 
-    // this.props.searchYelpQuery(query) {
-    //   this.setState({
-    //     results: results,
-    //     currentResult: result[0]
-    //   });
-    // };
+    this.props.searchYelpQuery(query) {
+      this.setState({
+        results: results,
+        currentResult: result[0]
+      });
+    };
   }
 
   handleTableResultEntry(result){
@@ -35,14 +35,22 @@ class App extends React.Component {
 
 //this is where all the components render
 render(){
-  return(
-    <div>
-     <nav className="navbar">
-      <div className="col-md06 offser-md03">
-      <Search handleSearchInput={this.getYelpResults.bind(this)}/>
-      </div>
-      </nav>
-      </div>
+ return(
+   <div>
+    <nav className="navbar">
+     <div className="col-md06 offser-md03">
+     <Search/>
+     </div>
+     </nav>
+     <div className="row">
+       <div className="col-md-7">
+         <Maps/>
+       </div>
+         <div className="col-md-5">
+           <TableList entries={this.state.entries} handleTableResultEntry={this.handleTableResultEntry.bind(this)}/>
+         </div>
+       </div>
+     </div>
   );
  }
 }
