@@ -19,13 +19,13 @@ class App extends React.Component {
       quert: query
     };
 
-    this.props.searchYelpQuery(query) {
+  /*  this.props.searchYelpQuery(query) {
       this.setState({
         results: results,
         currentResult: result[0]
       });
     };
-  }
+  }  */
 
   handleTableResultEntry(result){
     this.setState({currentResult: result});
