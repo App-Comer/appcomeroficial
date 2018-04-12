@@ -7,6 +7,7 @@ node_modules/
 ## Compiled files ##
 compiled/
 
-## API keys ##
+## API_SOURCES.JS ##
 src/config
 compiled/config
+config/
