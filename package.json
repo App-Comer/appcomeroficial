@@ -6,6 +6,8 @@
   "dependencies": {
     "body-parser": "*",
     "bootstrap": "*",
+    "embed-js": "^5.0.3",
+    "embed-plugin-map": "^5.0.3",
     "express": "^4.15.0",
     "jquery": "^2.2.1",
     "live-server": "^1.2.0",

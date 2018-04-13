@@ -44,7 +44,7 @@ render(){
      </nav>
      <div className="row">
        <div className="col-md-7">
-         <Maps/>
+         <Maps />
        </div>
          <div className="col-md-5">
            <TableList entries={this.state.entries} handleTableResultEntry={this.handleTableResultEntry.bind(this)}/>
