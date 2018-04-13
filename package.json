@@ -6,11 +6,15 @@
   "dependencies": {
     "body-parser": "*",
     "bootstrap": "*",
+    "embed-js": "^5.0.3",
+    "embed-plugin-map": "^5.0.3",
     "express": "^4.15.0",
-    "live-server": "^1.2.0",
     "jquery": "^2.2.1",
+    "live-server": "^1.2.0",
+    "lodash": "^4.17.5",
     "react": "^16.3.1",
-    "react-dom": "^16.3.1"
+    "react-dom": "^16.3.1",
+    "react-google-maps": "^9.4.5"
   },
   "devDependencies": {
     "babel-cli": "^6.6.5",
